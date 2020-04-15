@@ -19,7 +19,6 @@ import androidx.core.app.NotificationCompat;
 
 import com.example.covidtracer.dbhelpers.FirebaseDatabaseHelper;
 import com.example.covidtracer.models.Meet;
-import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.nearby.Nearby;
 import com.google.android.gms.nearby.messages.Message;
 import com.google.android.gms.nearby.messages.MessageListener;
