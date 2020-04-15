@@ -78,7 +78,7 @@ cd firestore/functions
 npm install
 ```
 - Then navigate back to previous directory by  ``` cd ../ ```
-- Then run ``` firebase deploy --only functions ``` to deploy push notification in cloud.
+- Then run ``` firebase deploy --only functions ``` command to deploy push notification in cloud.
 
 ***Make sure you have installed Firebase CLI reference***\
 If not installed then Follow the instructions guide for \
