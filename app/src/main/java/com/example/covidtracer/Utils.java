@@ -26,7 +26,7 @@ import java.util.ArrayList;
 public class Utils {
     private static final String TAG = "Utils";
     private final static int READ_BLOCK_SIZE = 8192;
-    public static final int MULTIPLE_PERMISSIONS = 100;
+    static final int MULTIPLE_PERMISSIONS = 100;
 
     public static void saveArrayList(Context context, String key, ArrayList<String> list){
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
@@ -45,7 +45,7 @@ public class Utils {
         return gson.fromJson(json, type);
     }
 
-    public static String readFromStorage(String filePath, String fileName){
+    static String readFromStorage(String filePath, String fileName){
         File file = new File(filePath + "/" + fileName);
         String content = "";
 
@@ -77,7 +77,7 @@ public class Utils {
         return null;
     }
 
-    public static void writeToStorage(String filePath, String fileName, String content) {
+    static void writeToStorage(String filePath, String fileName, String content) {
         try {
             File file = new File(filePath);
 
@@ -96,7 +96,7 @@ public class Utils {
         }
     }
 
-    public static void checkPermission(Activity activity) {
+    static void checkPermission(Activity activity) {
         if ((ContextCompat.checkSelfPermission(activity, Manifest.permission.INTERNET) != PackageManager.PERMISSION_GRANTED) ||
                 (ContextCompat.checkSelfPermission(activity, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) ||
                 (ContextCompat.checkSelfPermission(activity, Manifest.permission.BLUETOOTH) != PackageManager.PERMISSION_GRANTED)) {
