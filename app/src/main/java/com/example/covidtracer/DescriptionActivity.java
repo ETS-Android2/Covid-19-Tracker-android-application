@@ -60,6 +60,7 @@ public class DescriptionActivity extends AppCompatActivity {
                     Log.d(TAG, "Starting intent");
                     Intent intent1 = new Intent(DescriptionActivity.this, PhoneRegisterActivity.class);
                     startActivity(intent1);
+                    this.finish();
                 }
             } else {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -80,6 +81,9 @@ public class DescriptionActivity extends AppCompatActivity {
         }
 
         if (hasReadPermissions() && hasWritePermissions()) {
+            Intent intent1 = new Intent(DescriptionActivity.this, PhoneRegisterActivity.class);
+            startActivity(intent1);
+            this.finish();
             return;
         }
 
