@@ -36,5 +36,5 @@
     <string name="phone_desc">Enter the phone number. You will receive a unique code by SMS, which you will have to enter in the box below:</string>
     <string name="code_desc">Enter the code received by SMS:</string>
     <string name="push_notification">Covid Tracer: Someone you interacted with changed his status from:  %1$s to %2$s</string>
-    <string name="google_maps_api_key">"ENTER YOUR GOOGLE MAPS KEY HERE"</string>
+    <string name="google_maps_api_key">"AIzaSyB7d4r1eVFBVic2YcaONgMRpZY0XEH8CWo"</string>
 </resources>

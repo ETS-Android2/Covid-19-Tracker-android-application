@@ -166,6 +166,7 @@ public class NearbyTrackingService extends Service {
                     NotificationManager.IMPORTANCE_DEFAULT
             );
             NotificationManager manager = getSystemService(NotificationManager.class);
+            assert manager != null;
             manager.createNotificationChannel(serviceChannel);
         }
     }
