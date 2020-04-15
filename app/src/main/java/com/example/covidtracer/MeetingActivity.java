@@ -31,8 +31,8 @@ public class MeetingActivity extends FragmentActivity implements OnMapReadyCallb
 
         String metUserID = getIntent().getStringExtra("MET_USER_ID");
 
-        Float latitude = getIntent().getFloatExtra("LATITUDE", 26.4499f);
-        Float longitude = getIntent().getFloatExtra("LONGITUDE", 80.3319f);
+        float latitude = getIntent().getFloatExtra("LATITUDE", 26.4499f);
+        float longitude = getIntent().getFloatExtra("LONGITUDE", 80.3319f);
         coordinates = new LatLng(latitude, longitude);
 
         String date = getIntent().getStringExtra("DATE");
@@ -60,6 +60,7 @@ public class MeetingActivity extends FragmentActivity implements OnMapReadyCallb
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
+        assert mapFragment != null;
         mapFragment.getMapAsync(this);
     }
 
@@ -71,17 +72,16 @@ public class MeetingActivity extends FragmentActivity implements OnMapReadyCallb
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        GoogleMap mMap = googleMap;
-        mMap.setMinZoomPreference(16);
+        googleMap.setMinZoomPreference(16);
 
         CircleOptions options = new CircleOptions()
                 .radius(20)
                 .strokeWidth(3)
                 .center(coordinates);
 
-        mMap.addMarker(new MarkerOptions().position(coordinates).title("Point of Contact"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(coordinates));
-        mMap.addCircle(options);
+        googleMap.addMarker(new MarkerOptions().position(coordinates).title("Point of Contact"));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(coordinates));
+        googleMap.addCircle(options);
     }
 
 }

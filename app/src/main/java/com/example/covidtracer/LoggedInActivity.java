@@ -66,7 +66,6 @@ public class LoggedInActivity extends AppCompatActivity {
         });
 
         picker.setOnValueChangedListener((picker, oldVal, newVal) -> {
-            String oldStatus = statuses[oldVal];
             String newStatus = statuses[newVal];
             String currentStatus1 = sharedPreferences.getString(getString(R.string.status), "None");
             if (currentStatus1.equals(newStatus)) {
