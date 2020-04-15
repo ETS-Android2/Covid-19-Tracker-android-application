@@ -84,7 +84,7 @@ npm install
 If not installed then Follow the instructions guide for \
 https://firebase.google.com/docs/cli
 
-***Also You have to download your ```google-services.json``` file and move it the project folder.***
+***Also You have to download your ```google-services.json``` file and move it into the project folder.***
 
 ***The Sample APK file is located [here](https://github.com/Aniket-Wali/CovidTracker/blob/master/debug/app-debug.apk)***
 
