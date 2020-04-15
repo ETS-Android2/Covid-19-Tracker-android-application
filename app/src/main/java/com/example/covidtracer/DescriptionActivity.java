@@ -2,7 +2,6 @@ package com.example.covidtracer;
 
 import android.Manifest;
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
@@ -18,7 +17,6 @@ import androidx.core.content.ContextCompat;
 public class DescriptionActivity extends AppCompatActivity {
     private static final int REQUEST_WRITE_STORAGE_REQUEST_CODE = 101 ;
     private Activity activity;
-    private Context context;
     private static final String TAG = "DescriptionActivity";
 
     @Override
@@ -26,7 +24,6 @@ public class DescriptionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         activity = this;
-        context = this;
         requestAppPermissions();
         Button btnRegister = findViewById(R.id.btn_register);
         btnRegister.setOnClickListener(v -> Utils.checkPermission(activity));
@@ -38,7 +35,6 @@ public class DescriptionActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         activity = null;
-        context = null;
     }
 
     // Function to initiate after permissions are given by user

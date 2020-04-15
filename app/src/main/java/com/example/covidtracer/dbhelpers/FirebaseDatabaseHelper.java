@@ -94,6 +94,7 @@ public class FirebaseDatabaseHelper {
                 .get().addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
                         DocumentSnapshot document = task.getResult();
+                        assert document != null;
                         if (document.exists()) {
                             Log.d(TAG, "DocumentSnapshot data: " + document.getData());
                         } else {
