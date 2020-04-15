@@ -19,6 +19,7 @@ import androidx.core.app.NotificationCompat;
 
 import com.example.covidtracer.dbhelpers.FirebaseDatabaseHelper;
 import com.example.covidtracer.models.Meet;
+import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.nearby.Nearby;
 import com.google.android.gms.nearby.messages.Message;
 import com.google.android.gms.nearby.messages.MessageListener;
@@ -29,6 +30,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 import static com.example.covidtracer.Utils.writeToStorage;
+import static com.google.android.gms.location.LocationServices.getFusedLocationProviderClient;
 
 public class NearbyTrackingService extends Service {
     private final String TAG = "MessageService";
@@ -65,8 +67,14 @@ public class NearbyTrackingService extends Service {
                 @SuppressLint("SimpleDateFormat") SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
                 String formattedDate = df.format(time);
 
+                LocationRequest mLocationRequest = new LocationRequest();
 
-
+                mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+                getFusedLocationProviderClient(getApplicationContext()).getLastLocation().addOnSuccessListener(location -> {
+                    String filePath = getApplicationContext().getFilesDir().toString() + "/meetings" + "/" + metUserUID;
+                    writeToStorage(filePath , "latitude.txt", String.valueOf(location.getLatitude()) );
+                    writeToStorage(filePath , "longitude.txt", String.valueOf(location.getLongitude()));
+                });
 
                 String filePath = getApplicationContext().getFilesDir().toString() + "/meetings" + "/" + metUserUID;
                 writeToStorage(filePath , "date.txt", formattedDate);
