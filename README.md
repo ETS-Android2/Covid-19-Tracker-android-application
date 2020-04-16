@@ -4,6 +4,9 @@
 After you sign in, you get an OTP token generated using Firebase Phone Auth. After you login, the application starts a background service that constantly publishes and receives the Firestore Database UIDs, by using the Nearby Messages API from Google. When two devices are in close proximity (approximately 4-5m for Bluetooth + Sonar), their meetup is registered in Firestore.
 From the picker in the logged in screen, you can choose your current health status and press the button. This updates your health status in the database. Using Firestore Cloud Messages, there is a JavaScript function that triggers when this update happens and sends a push notification to the users that you have interacted with.
 
+### Screenshots
+<img src="/Screenshots/screenshot.jpg" height=500 width=100%>
+
 ### Backend
 - https://firebase.google.com/docs/firestore/quickstart
 - https://firebase.google.com/docs/functions/get-started
