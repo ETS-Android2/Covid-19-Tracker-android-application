@@ -93,5 +93,5 @@ https://firebase.google.com/docs/cli
 
 ---
 
-If any problem occur in this project, feel free to contact me : <twinkle.katiyar006@gmail.com>
+If any problem occur in this project, feel free to contact me : <twinklekatiyar006@gmail.com>
 
