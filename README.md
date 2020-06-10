@@ -91,8 +91,6 @@ https://firebase.google.com/docs/cli
 
 ***The Sample APK file is located [here](https://github.com/twinkle-katiyar/CovidTracker/blob/master/debug/app-debug.apk)***
 
-***Sample Video of its Working can be found [here](https://www.youtube.com/watch?v=Zp8j5FFrXLE)***
-
 ---
 
 If any problem occur in this project, feel free to contact me : <twinkle.katiyar006@gmail.com>
