@@ -89,9 +89,9 @@ https://firebase.google.com/docs/cli
 
 ***Also You have to download your ```google-services.json``` file and move it into the project folder.***
 
-***The Sample APK file is located [here](https://github.com/twinkle-katiyar/CovidTracker/blob/master/debug/app-debug.apk)***
+***The Sample APK file is located [here](https://github.com/Aniket-Wali/CovidTracker/blob/master/debug/app-debug.apk)***
 
 ---
 
-If any problem occur in this project, feel free to contact me : <twinklekatiyar006@gmail.com>
+If any problem occur in this project, feel free to contact me : <aniket.wali007@gmail.com>
 
